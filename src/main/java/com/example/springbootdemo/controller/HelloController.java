@@ -19,7 +19,7 @@ public class HelloController {
   AsyncTask asyncTask;
 
   @RequestMapping("/test/hello")
-  public Object hello(){
+  public String hello(){
     long start = System.currentTimeMillis();
     asyncTask.task1();
     asyncTask.task2();
