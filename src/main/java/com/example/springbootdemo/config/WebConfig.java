@@ -2,6 +2,7 @@ package com.example.springbootdemo.config;
 
 import com.example.springbootdemo.filter.TestFilter;
 import com.example.springbootdemo.interceptor.LogInterceptor;
+import com.example.springbootdemo.interceptor.TokenInterceptor;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,6 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
   @Override
   public void addInterceptors(InterceptorRegistry registry) {
     registry.addInterceptor(new LogInterceptor()).addPathPatterns("/**");
+    registry.addInterceptor(new TokenInterceptor()).addPathPatterns("/**");
   }
 
   @Bean
