@@ -1,5 +1,6 @@
 package com.example.springbootdemo.controller;
 
+import com.example.springbootdemo.config.processer.TestHandler;
 import com.example.springbootdemo.task.AsyncTask;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,14 @@ public class HelloController {
     asyncTask.task2();
     log.info("testAsyncTask all cost {}", System.currentTimeMillis() - start);
     return "hello";
+  }
+
+  @Autowired
+  private TestHandler testHandler;
+
+  @RequestMapping("/test/beanDefinitionRegistryPostProcesser")
+  public void handler(){
+    testHandler.handle();
   }
 }
 
