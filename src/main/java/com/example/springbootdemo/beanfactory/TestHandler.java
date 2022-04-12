@@ -1,4 +1,4 @@
-package com.example.springbootdemo.config.processer;
+package com.example.springbootdemo.beanfactory;
 
 /**
  * @author zhouwenjun

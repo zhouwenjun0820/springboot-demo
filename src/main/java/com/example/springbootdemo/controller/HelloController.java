@@ -1,6 +1,6 @@
 package com.example.springbootdemo.controller;
 
-import com.example.springbootdemo.config.processer.TestHandler;
+import com.example.springbootdemo.beanfactory.TestHandler;
 import com.example.springbootdemo.task.AsyncTask;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
