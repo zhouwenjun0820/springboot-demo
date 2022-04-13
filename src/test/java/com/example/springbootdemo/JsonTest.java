@@ -15,6 +15,8 @@ public class JsonTest {
 
   @Test
   public static void main(String[] args) {
+
+
     ClassA classA = new ClassA();
     Address address = new Address();
     address.setAddress("aaaa");
